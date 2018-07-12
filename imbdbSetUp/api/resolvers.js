@@ -12,6 +12,9 @@ const resolvers = {
         },
         people() {
             return data.people;
+        },
+        person(root, { id }) {
+            return data.people.find(person => person.id === parseInt(id));
         }
     },
     Movie: {
