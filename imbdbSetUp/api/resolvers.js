@@ -9,6 +9,9 @@ const resolvers = {
             id
         }) {
             return data.movies.find(movie => movie.id === parseInt(id));
+        },
+        people() {
+            return data.people;
         }
     },
     Movie: {
