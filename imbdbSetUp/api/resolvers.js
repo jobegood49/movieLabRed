@@ -31,6 +31,16 @@ const resolvers = {
             ));
         },
     },
+    Person: {
+        filmography(person) {
+            // const { filmography} = data.people.find(p => {
+            //     if (p.id === person.id)
+            //         return p.filmography
+            // })
+            // return data.movies.filter(movie => filmography.includes(movie.id))
+            return data.movies.filter(movie => person.filmography.includes(movie.id))
+        }
+    },
     Mutation: {
         addPerson(root, args) {
             const newPerson = {
