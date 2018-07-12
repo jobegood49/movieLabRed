@@ -11,6 +11,7 @@ const resolvers = {
             return data.movies.find(movie => movie.id === parseInt(id));
         },
         people() {
+            console.log("hello");
             return data.people;
         },
         person(root, { id }) {
